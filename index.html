@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/background.webp" type="image/x-icon">
+
+    <title>Weather App by Charles</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="main-container">
+            <div class="img-section">
+                <div class="default-info">
+                    <h2 class="default-day">Sunday</h2>
+                    <span class="default-date">20 April, 2025</span>
+                    <form class="mobile-search">
+                        <input type="text" name="location" id="location" placeholder="Search Location" class="input-field">
+                        <button type="submit" class="btn-search">Search</button>
+                    </form>
+                    <div class="icons fadeIn">
+                        <img src="./images/weather-icon-big.png" alt="">
+                        <h2 class="weather-temp">22°C</h2>
+                        <h3 class="cloudtxt">Overcast Clouds</h3>
+                        <h3 class="country">Nigeria</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="content-section">
+                <form>
+                    <input type="text" name="location" id="location" placeholder="Search Location" class="input-field">
+                    <button type="submit" class="btn-search">Search</button>
+                </form>
+
+                <!-- Content Error Display -->
+                <div class="content-error">
+                    <img src="./images/content error.png" alt="" class="content-error-img fadeIn">
+                </div>
+
+                <div class="day-info">
+                    <div class="content">
+                        <p class="title">NAME</p>
+                        <span class="value fadeIn">United Kingdom</span>
+                    </div>
+                    <div class="content">
+                        <p class="title">TEMP</p>
+                        <span class="value fadeIn">23°C</span>
+                    </div>
+                    <div class="content">
+                        <p class="title">HUMIDITY</p>
+                        <span class="value fadeIn">2%</span>
+                    </div>
+                    <div class="content">
+                        <p class="title">WIND SPEED</p>
+                        <span class="value fadeIn">4.9 Km/hr</span>
+                    </div>
+                </div>
+
+                <div class="list-content">
+                    <ul>
+                        <li class="list-item fadeIn">
+                            <img src="./images/weather-icon.png" alt="">
+                            <span>Sat</span>
+                            <span class="day-temp">23°C</span>
+                        </li>
+                        <li class="list-item fadeIn">
+                            <img src="./images/weather-icon.png" alt="">
+                            <span>Sat</span>
+                            <span class="day-temp">23°C</span>
+                        </li>
+                        <li class="list-item fadeIn">
+                            <img src="./images/weather-icon.png" alt="">
+                            <span>Sat</span>
+                            <span class="day-temp">23°C</span>
+                        </li>
+                        <li class="list-item fadeIn">
+                            <img src="./images/weather-icon.png" alt="">
+                            <span>Sat</span>
+                            <span class="day-temp">23°C</span>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="./main.js"></script>
+    
+</body>
+</html>

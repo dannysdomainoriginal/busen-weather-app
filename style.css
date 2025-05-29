@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #37474f;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+body .container {
+  max-width: 1100px;
+  width: 100%;
+  background-color: #232931;
+  color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  transform: scale(0.7);
+}
+body .container .main-container {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  gap: 0.5rem;
+}
+body .container .main-container .img-section {
+  border-radius: 25px;
+  background-image: url("./images/background.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 25rem;
+  transform: scale(1.03) perspective(200px);
+}
+body .container .main-container .img-section:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #5c6bc0 10%, #0d47a1 100%);
+  z-index: -1;
+  opacity: 0.8;
+  border-radius: 25px;
+}
+body .container .main-container .img-section .default-info {
+  padding: 1.5rem 0 2rem;
+  text-align: center;
+}
+body .container .main-container .img-section .default-info img {
+  width: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 auto;
+}
+body .container .main-container .img-section .default-info img.error {
+  padding: 2rem 2rem 0.5rem;
+}
+body .container .main-container .img-section .default-info h2 {
+  font-size: 3rem;
+}
+body .container .main-container .img-section .default-info h3 {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+body .container .main-container .img-section .default-info .country {
+  font-weight: 400;
+  margin-top: 0.4rem;
+  font-size: 1.5rem;
+  display: none;
+}
+body .container .main-container .img-section .default-info .weather-temp {
+  font-size: 4rem;
+  font-weight: 800;
+}
+body .container .main-container .content-section {
+  padding: 1.5rem 3rem 1.5rem 0rem;
+}
+body .container .main-container .content-section form {
+  margin: 1.5rem 0;
+  position: relative;
+}
+body .container .main-container .content-section form input {
+  width: 84%;
+  outline: none;
+  background: transparent;
+  border: 1px solid #37474f;
+  border-radius: 5px;
+  padding: 0.7rem 1rem;
+  font-family: inherit;
+  color: white;
+  font-size: 1rem;
+}
+body .container .main-container .content-section form button {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0.7rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  background: #5c6bc0;
+  border: 1px solid #5c6bc0;
+  color: white;
+  cursor: pointer;
+}
+body .container .main-container .content-section .day-info .content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+}
+body .container .main-container .content-section .day-info .content .title {
+  font-weight: 600;
+}
+body .container .main-container .content-section .list-content ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin: 3rem 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 1rem;
+}
+body .container .main-container .content-section .list-content ul li {
+  padding: 0.5rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in;
+  flex-grow: 1;
+}
+body .container .main-container .content-section .list-content ul li:hover {
+  transform: scale(1.1);
+  background-color: #fff;
+  color: #232931;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+body .container .main-container .content-section .content-error {
+  display: none;
+  place-content: center;
+  height: 70%;
+  width: 100%;
+  margin: 3rem 0;
+}
+body .container .main-container .content-section .content-error img {
+  margin: auto;
+  width: 80%;
+}
+
+.icons, .value, .list-item, .content-error-img {
+  opacity: 0;
+}
+
+.fadeIn {
+  animation: 1s fadeIn forwards;
+  animation-delay: 0.7s;
+}
+
+@keyframes fadeIn {
+  to {
+    transition: all 0.5s ease-in;
+    opacity: 1;
+  }
+}
+.mobile-search {
+  margin: 2rem 0;
+  position: relative;
+  display: none;
+}
+.mobile-search input {
+  width: 84%;
+  outline: none;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 0.7rem 1rem;
+  font-family: inherit;
+  color: white;
+  font-size: 1rem;
+}
+.mobile-search input::-moz-placeholder {
+  color: white;
+}
+.mobile-search input::placeholder {
+  color: white;
+}
+.mobile-search button {
+  position: absolute;
+  top: -0.5px;
+  right: 39px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0.7rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  background: #5c6bc0;
+  border: 1px solid #5c6bc0;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  body .container .main-container .img-section .default-info h2 {
+    font-size: 2rem;
+  }
+  body .container .main-container .img-section .default-info img {
+    width: 80%;
+  }
+  body .container .main-container .img-section .default-info .weather-temp {
+    font-size: 3rem;
+  }
+  body .container .main-container .img-section {
+    width: 20rem;
+  }
+}
+@media (max-width: 800px) {
+  body .container .main-container .img-section .default-info h2 {
+    font-size: 2rem;
+  }
+  body .container .main-container .img-section .default-info img {
+    width: 50%;
+  }
+  body .container .main-container .img-section .default-info .weather-temp {
+    font-size: 3rem;
+  }
+  body .container .main-container .img-section {
+    width: 19rem;
+  }
+}
+@media (max-width: 760px) {
+  body .container .main-container .content-section {
+    display: none;
+  }
+  body .container {
+    width: -moz-min-content;
+    width: min-content;
+  }
+  body .container .main-container .img-section .default-info h2 {
+    font-size: 3rem;
+  }
+  body .container .main-container .img-section .default-info img {
+    width: 80%;
+  }
+  body .container .main-container .img-section .default-info .weather-temp {
+    font-size: 4rem;
+  }
+  body .container .main-container .img-section {
+    width: 30rem;
+  }
+  body .container .main-container .img-section .default-info .country {
+    display: block;
+  }
+  .mobile-search {
+    display: block;
+  }
+}
