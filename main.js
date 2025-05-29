@@ -204,10 +204,10 @@ let displayForeCast = async (lat, long) => {
 
     listContentElement.innerHTML =
     `
+        ${listContentDisplay(0)}
         ${listContentDisplay(1)}
         ${listContentDisplay(2)}
         ${listContentDisplay(3)}
-        ${listContentDisplay(4)}
     `
 
     
